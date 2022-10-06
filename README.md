@@ -34,3 +34,12 @@
 7. Show total revenue in year 2020 in Chennai
 
   	`SELECT SUM(T.SALES_AMOUNT) FROM TRANSACTIONS AS T INNER JOIN DATE AS D ON T.ORDER_DATE = D.DATE WHERE D.YEAR=2020 AND T.MARKET_CODE = "Mark001";`
+    
+    
+### Data Analysis Using Power BI
+
+1. Formula to create final_sales_amount column
+
+  	`= Table.AddColumn(#"Cleanup currency", "final_sales_amount", each if [currency] = "USD#(cr)" then 75*[sales_amount] else if [currency] ="INR#(cr)" then 1*[sales_amount] else null)`
+    
+[Power BI dashboard](https://drive.google.com/file/d/19Z9MrX25josmy217od7EHEOWdTX70p6m/view?usp=sharing)
