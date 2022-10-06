@@ -12,4 +12,4 @@
 2. Show total number of customers
 `SELECT COUNT(*) FROM CUSTOMERS;`
 3. Show transactions for Delhi NCR market (market code for delhi ncr is Mark004)
-`SELECT DISTINCT(PRODUCT_CODE) FROM TRANSACTIONS WHERE MARKET_CODE ='Mark001';`
+`SELECT DISTINCT(PRODUCT_CODE) FROM TRANSACTIONS WHERE MARKET_CODE ='Mark004';`
